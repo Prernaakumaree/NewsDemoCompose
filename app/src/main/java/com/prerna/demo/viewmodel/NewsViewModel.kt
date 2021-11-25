@@ -32,11 +32,6 @@ class NewsViewModel @ViewModelInject constructor(private val repo: NewsRepositor
     }
     val activeCategory: LiveData<Category> = _activeCategory
 
-    /*private val _activeCategoryUiState = MutableLiveData<ArticleListUiState>().apply {
-        value = ArticleListUiState()
-    }
-    private val activeCategoryUiState: LiveData<ArticleListUiState> = _activeCategoryUiState*/
-
     private var firstPageUiState = ArticleListUiState()
     private val _firstCategoryUiState = MutableLiveData<ArticleListUiState>().apply {
         value = ArticleListUiState()
