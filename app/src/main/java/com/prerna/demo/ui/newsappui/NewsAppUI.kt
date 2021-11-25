@@ -68,10 +68,7 @@ fun BodyContent(
             TopAppBar(stringRes, onThemeSwitch = {
                 onThemeSwitch()
             })
-            /* This when statement does not make any sense. Need to figure out better solution.
-               the idea was to change uiState based on activeCategory, but when 2 category has different number of articles
-               and you switch between pages LazyColumnFor remembers scroll position of previous state which leads to ArrayIndexOutOfBound Exception.
-             */
+           
             when (activeIndex) {
                 0 -> {
                     NewsListContainer(
